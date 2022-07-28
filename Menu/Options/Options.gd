@@ -3,7 +3,7 @@ extends Control
 func _ready():
 	set_process(true)
 
-func _process(_delta):
+func _physics_process(_delta):
 	if Input.is_action_pressed("key_exit"):
 		$FadeIn.show()
 		$FadeIn.fade_in()

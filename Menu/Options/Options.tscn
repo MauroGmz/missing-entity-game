@@ -7,7 +7,7 @@
 
 [sub_resource type="DynamicFont" id=1]
 size = 48
-extra_spacing_char = 10
+extra_spacing_char = 20
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -36,36 +36,36 @@ alignment = 1
 
 [node name="Title" type="Label" parent="VBoxContainer"]
 margin_top = 160.0
-margin_right = 300.0
+margin_right = 393.0
 margin_bottom = 215.0
 custom_fonts/font = SubResource( 1 )
-text = "Options"
+text = "Opciones"
 align = 1
 valign = 1
 uppercase = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 margin_top = 219.0
-margin_right = 300.0
+margin_right = 393.0
 margin_bottom = 255.0
 
 [node name="FullScreen" type="Label" parent="VBoxContainer/HBoxContainer"]
-margin_right = 172.0
+margin_right = 265.0
 margin_bottom = 36.0
 custom_fonts/font = SubResource( 2 )
-text = "Full Screen:"
+text = "Pantalla completa:"
 
 [node name="FullScreenCheck" type="CheckBox" parent="VBoxContainer/HBoxContainer/FullScreen"]
-margin_left = 192.0
+margin_left = 309.0
 margin_top = -13.0
-margin_right = 224.0
+margin_right = 341.0
 margin_bottom = 19.0
 rect_min_size = Vector2( 32, 32 )
 rect_scale = Vector2( 2, 2 )
 
 [node name="Back" type="Button" parent="VBoxContainer"]
 margin_top = 259.0
-margin_right = 300.0
+margin_right = 393.0
 margin_bottom = 320.0
 custom_colors/font_color_hover = Color( 0.0117647, 0.584314, 0.756863, 1 )
 custom_fonts/font = SubResource( 3 )
