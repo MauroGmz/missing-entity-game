@@ -29,11 +29,12 @@ extents = Vector2( 4, 20.5 )
 [node name="BulletPlayer01" type="Area2D" groups=["bulletplayer01"]]
 script = ExtResource( 2 )
 
-[node name="BulletRedSprite" type="AnimatedSprite" parent="."]
+[node name="BulletCanon" type="AnimatedSprite" parent="."]
 position = Vector2( 1, 0 )
 scale = Vector2( 0.35, 0.35 )
 frames = SubResource( 5 )
 animation = "misil"
+frame = 2
 playing = true
 
 [node name="BulletShape" type="CollisionShape2D" parent="."]

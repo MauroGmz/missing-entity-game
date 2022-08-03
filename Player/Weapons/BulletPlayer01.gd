@@ -4,7 +4,7 @@ var speed = -650
 var velocity = Vector2()
 
 func _ready():
-	$BulletRedSprite.play()
+	$BulletCanon.play()
 
 func start(pos, dir):
 	rotation = dir

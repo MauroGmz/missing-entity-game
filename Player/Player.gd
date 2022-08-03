@@ -28,9 +28,9 @@ func get_axis() -> Vector2:
 
 func animation_ctrl():
 	if get_axis() == Vector2.ZERO:
-		$Ship.animation = "still"
-	else:
 		$Ship.animation = "normal"
+	else:
+		$Ship.animation = "shot"
 
 func motion_ctrl():
 	if get_axis() == Vector2.ZERO:

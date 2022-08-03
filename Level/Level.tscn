@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Level/BgLevel1.jpg" type="Texture" id=1]
 [ext_resource path="res://FadeIn/FadeIn.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Level/Level.gd" type="Script" id=3]
 [ext_resource path="res://assets/sprites/space/meteor.png" type="Texture" id=4]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/sprites/space/stars1.png" type="Texture" id=6]
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 3 )
@@ -24,14 +25,32 @@ centered = false
 [node name="Stars1" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Stars1"]
-motion_mirroring = Vector2( 0, 240 )
+motion_mirroring = Vector2( 0, 1080 )
 
-[node name="Sprite" type="Sprite" parent="Stars1/ParallaxLayer"]
+[node name="SpriteStarts" type="Sprite" parent="Stars1/ParallaxLayer"]
+position = Vector2( 304, 150 )
+texture = ExtResource( 6 )
+
+[node name="SpriteStarts2" type="Sprite" parent="Stars1/ParallaxLayer"]
+position = Vector2( 1763, 776 )
+rotation = 1.5708
+texture = ExtResource( 6 )
+
+[node name="Stars2" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Stars2"]
+motion_mirroring = Vector2( 0, 1500 )
+
+[node name="SpriteStarts3" type="Sprite" parent="Stars2/ParallaxLayer"]
+position = Vector2( 129, 506 )
+rotation = -1.5708
+scale = Vector2( 0.72531, 0.800226 )
+texture = ExtResource( 6 )
 
 [node name="Meteors1" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Meteors1"]
-motion_mirroring = Vector2( 0, 480 )
+motion_mirroring = Vector2( 0, 1280 )
 
 [node name="Sprite" type="Sprite" parent="Meteors1/ParallaxLayer"]
 modulate = Color( 1, 1, 1, 0.470588 )
@@ -42,5 +61,10 @@ centered = false
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1008, 894 )
+
+[node name="BgLevel1" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0.219608 )
+texture = ExtResource( 1 )
+centered = false
 
 [connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]
